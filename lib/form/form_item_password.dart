@@ -26,6 +26,7 @@ class FormItemPassword extends StatefulWidget implements FormItem {
     this.color,
     this.subColor,
     this.focusNode,
+    this.fontSize,
   });
 
   final String? hintText;
@@ -52,6 +53,7 @@ class FormItemPassword extends StatefulWidget implements FormItem {
   final String? notMatchText;
   final Color? color;
   final Color? subColor;
+  final double? fontSize;
 
   @override
   State<StatefulWidget> createState() => _FormItemPasswordState();
@@ -118,14 +120,14 @@ class _FormItemPasswordState extends State<FormItemPassword> {
               counterText: widget.counterText,
               prefix: widget.prefix,
               suffix: widget.suffix,
-              labelStyle: TextStyle(color: widget.color),
-              hintStyle: TextStyle(color: widget.subColor),
-              suffixStyle: TextStyle(color: widget.subColor),
-              prefixStyle: TextStyle(color: widget.subColor),
-              counterStyle: TextStyle(color: widget.subColor),
-              helperStyle: TextStyle(color: widget.subColor),
+              labelStyle: TextStyle(color: widget.color, fontSize: fontSize),
+              hintStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
+              suffixStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
+              prefixStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
+              counterStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
+              helperStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
             ),
-            style: TextStyle(color: widget.color),
+            style: TextStyle(color: widget.color, fontSize: fontSize),
             obscureText: true,
             readOnly: false,
             validator: (value) {
@@ -199,14 +201,14 @@ class _FormItemPasswordState extends State<FormItemPassword> {
                 counterText: widget.counterText,
                 prefix: widget.prefix,
                 suffix: widget.suffix,
-                labelStyle: TextStyle(color: widget.color),
-                hintStyle: TextStyle(color: widget.subColor),
-                suffixStyle: TextStyle(color: widget.subColor),
-                prefixStyle: TextStyle(color: widget.subColor),
-                counterStyle: TextStyle(color: widget.subColor),
-                helperStyle: TextStyle(color: widget.subColor),
+                labelStyle: TextStyle(color: widget.color, fontSize: fontSize),
+                hintStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
+                suffixStyle: TextStyle(color: widget.subColor, fontSize, fontSize),
+                prefixStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
+                counterStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
+                helperStyle: TextStyle(color: widget.subColor, fontSize: fontSize),
               ),
-              style: TextStyle(color: widget.color),
+              style: TextStyle(color: widget.color, fontSize: fontSize),
               obscureText: true,
               readOnly: false,
               validator: (value) {
